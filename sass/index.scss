@@ -13,15 +13,16 @@ $gray: #eaeaea;
 // Shadow & gradients
 
 $shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+$gradient: linear-gradient(
+      201deg,
+      $primary_color -5.2%,
+      $secondary_color 110.74%
+);
 
 // Mixins
 
 @mixin btn_gradient {
-      background: linear-gradient(
-            201deg,
-            $primary_color -5.2%,
-            $secondary_color 110.74%
-      );
+      background: $gradient;
       padding: 15px;
       color: white;
       border-radius: 25px;
@@ -42,6 +43,9 @@ a {
 }
 li {
       list-style-type: none;
+}
+h2 {
+      margin-bottom: 25px;
 }
 
 // Style homepage
@@ -106,6 +110,7 @@ header {
             width: 75%;
             text-align: center;
             text-wrap: pretty;
+            margin: 0;
       }
 
       p {
@@ -125,10 +130,6 @@ header {
       display: flex;
       flex-direction: column;
       padding: 50px 20px;
-
-      h2 {
-            margin-bottom: 25px;
-      }
 
       .choice__container {
             display: flex;
@@ -164,6 +165,57 @@ header {
                   color: white;
                   border-radius: 50%;
                   z-index: 1;
+            }
+      }
+}
+
+.liste_restaurants {
+      background: $light_gray;
+      display: flex;
+      flex-direction: column;
+      padding: 50px 20px;
+      gap: 20px;
+
+      article {
+            position: relative;
+            background: white;
+            display: flex;
+            flex-flow: column nowrap;
+
+            a {
+                  color: black;
+            }
+
+            img {
+                  width: 100%;
+                  border-radius: 15px 15px 0 0;
+                  flex: 1 0 0;
+            }
+
+            .text__container {
+                  padding: 15px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+
+                  .text__title {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                  }
+            }
+
+            .new_badge {
+                  position: absolute;
+                  top: 15px;
+                  right: 15px;
+                  font-size: 14px;
+                  font-weight: 500;
+
+                  background: $tertiary_color;
+                  color: $tertiary_color_darker;
+                  padding: 10px;
+                  border-radius: 2px;
             }
       }
 }
