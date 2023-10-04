@@ -14,12 +14,30 @@
             <link
                   href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
                   rel="stylesheet" />
+            <link
+                  rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+                  integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+                  crossorigin="anonymous"
+                  referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="../sass/index.css" />
       </head>
       <body>
             <main>
-                  <iframe
-                        src="./components/header.html"
-                        frameborder="0"></iframe>
+                  <header>
+                        <nav>
+                              <h1>ohmyfood</h1>
+                        </nav>
+
+                        <!-- Recherche et affichage de la localisation -->
+                        <div class="geoloc_search">
+                              <i class="fa-solid fa-location-dot"></i>
+                              <input
+                                    type="search"
+                                    placeholder="Paris, Belleville"
+                                    name="localisation" />
+                        </div>
+                  </header>
                   <section class="homepage">
                         <!-- Description du site -->
                         <div class="description_container">
@@ -34,24 +52,27 @@
                         <!-- Fonctionnement du site -->
                         <div class="fonctionnement">
                               <h2>Fonctionnement</h2>
-                              <div class="choice_container">
-                                    <i></i>
-                                    <div class="choix_restaurant">
-                                          <i></i>
+                              <div class="choice__container">
+                                    <span>1</span>
+                                    <div class="choice__item">
+                                          <i
+                                                class="fa-solid fa-mobile-screen-button"></i>
                                           <p>Choisissez un restaurant</p>
                                     </div>
                               </div>
-                              <div class="choice_container">
-                                    <i></i>
-                                    <div class="composition_menu">
-                                          <i></i>
+                              <div class="choice__container">
+                                    <span>2</span>
+                                    <div class="choice__item">
+                                          <i
+                                                class="fa-solid fa-list"
+                                                style="color: #7e7e7e"></i>
                                           <p>Composez votre menu</p>
                                     </div>
                               </div>
-                              <div class="choice_container">
-                                    <i></i>
-                                    <div class="degustation">
-                                          <i></i>
+                              <div class="choice__container">
+                                    <span>3</span>
+                                    <div class="choice__item last">
+                                          <i class="fa-solid fa-store"></i>
                                           <p>Dégustez au restaurant</p>
                                     </div>
                               </div>
@@ -98,9 +119,27 @@
                               </article>
                         </div>
                   </section>
-                  <iframe
-                        src="./components/footer.html"
-                        frameborder="0"></iframe>
+                  <footer>
+                        <img
+                              src="../assets/images/logo/ohmyfood@2x.svg"
+                              alt="Logo ohmyfood" />
+                        <div class="links_container">
+                              <ul>
+                                    <li>
+                                          <i></i
+                                          ><a href="#"
+                                                >Proposer un restaurant</a
+                                          >
+                                    </li>
+                                    <li>
+                                          <i></i
+                                          ><a href="#">Devenir partenaire</a>
+                                    </li>
+                                    <li><a href="#">Mentions légales</a></li>
+                                    <li><a href="#">Contact</a></li>
+                              </ul>
+                        </div>
+                  </footer>
             </main>
       </body>
 </html>
