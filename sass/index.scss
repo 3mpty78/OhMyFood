@@ -1,9 +1,24 @@
+// Imports
+
 // Couleurs
 $primary_color: #9456dc;
 $secondary_color: #ff79da;
+
 $tertiary_color: #99e2d0;
+$tertiary_color_darker: #008766;
+
 $light_gray: #f6f6f6;
 
 // Mixins
+
+@mixin btn_gradient {
+      background: linear-gradient(
+            201deg,
+            $primary_color -5.2%,
+            $secondary_color 110.74%
+      );
+      padding: 13px 16px;
+      color: white;
+}
 
 // Style
