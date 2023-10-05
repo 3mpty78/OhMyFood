@@ -115,6 +115,9 @@ header .geoloc_search input {
 .fonctionnement .choice__container .choice__item i {
   color: #7e7e7e;
 }
+.fonctionnement .choice__container .choice__item p {
+  font-weight: 500;
+}
 .fonctionnement .choice__container .last i {
   color: #9456dc;
 }
@@ -142,20 +145,25 @@ header .geoloc_search input {
   background: white;
   display: flex;
   flex-flow: column nowrap;
+  flex: 1 0 0;
+  border-radius: 15px;
 }
 .liste_restaurants article a {
   color: black;
 }
 .liste_restaurants article img {
   width: 100%;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15px 15px 0 0;
-  flex: 1 0 0;
 }
 .liste_restaurants article .text__container {
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
 }
 .liste_restaurants article .text__container .text__title {
   display: flex;

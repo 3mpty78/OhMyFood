@@ -150,6 +150,10 @@ header {
                   i {
                         color: #7e7e7e;
                   }
+
+                  p {
+                        font-weight: 500;
+                  }
             }
             & .last i {
                   color: $primary_color;
@@ -181,6 +185,8 @@ header {
             background: white;
             display: flex;
             flex-flow: column nowrap;
+            flex: 1 0 0;
+            border-radius: 15px;
 
             a {
                   color: black;
@@ -188,8 +194,9 @@ header {
 
             img {
                   width: 100%;
+                  height: 230px;
+                  object-fit: cover;
                   border-radius: 15px 15px 0 0;
-                  flex: 1 0 0;
             }
 
             .text__container {
@@ -197,6 +204,7 @@ header {
                   display: flex;
                   justify-content: space-between;
                   align-items: center;
+                  flex-grow: 1;
 
                   .text__title {
                         display: flex;
