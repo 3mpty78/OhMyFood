@@ -180,4 +180,35 @@ header .geoloc_search input {
   color: #008766;
   padding: 10px;
   border-radius: 2px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background: #353535;
+}
+footer img {
+  filter: invert(1);
+  width: 140px;
+  margin-bottom: 16px;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer ul li {
+  display: flex;
+  gap: 10px;
+}
+footer ul li a {
+  color: white;
+}
+footer i {
+  color: white;
+  width: 15px;
+}
+footer .fa-handshake-simple {
+  transform: rotate(-45deg);
 }/*# sourceMappingURL=index.css.map */
