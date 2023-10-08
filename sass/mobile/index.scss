@@ -1,4 +1,5 @@
 // Imports
+// @import "./alafrancaise.scss";
 
 // Couleurs
 $primary_color: #9456dc;
@@ -55,6 +56,7 @@ main {
 
 // Header
 header {
+      position: relative;
       width: 100%;
       display: flex;
       flex-flow: column nowrap;
@@ -65,11 +67,20 @@ header {
             padding: 10px 0;
             width: 100%;
             box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             h1 {
                   font-family: Shrikhand;
                   font-size: 30px;
                   text-align: center;
+            }
+
+            a {
+                  position: absolute;
+                  left: 20px;
+                  transform: scale(1.5);
             }
       }
 
@@ -241,7 +252,7 @@ footer {
 
       img {
             filter: invert(1);
-            width: 140px;
+            width: 110px;
             margin-bottom: 16px;
       }
 
@@ -255,6 +266,7 @@ footer {
                   gap: 10px;
                   a {
                         color: white;
+                        font-weight: 500;
                   }
             }
       }
@@ -265,5 +277,102 @@ footer {
       }
       .fa-handshake-simple {
             transform: rotate(-45deg);
+      }
+}
+
+// Page des restaurants
+.restaurant {
+      width: 100vw;
+      height: auto;
+
+      img {
+            width: 100%;
+      }
+
+      &__menu {
+            position: relative;
+            top: -50px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 40px 40px 0 0;
+            background: $light_gray;
+            padding: 0 15px;
+
+            h3 {
+                  text-transform: uppercase;
+                  font-weight: lighter;
+                  font-size: 16px;
+            }
+
+            .border {
+                  width: 40px;
+                  height: 2px;
+                  margin-top: 5px;
+                  margin-bottom: 12px;
+                  background: $tertiary_color;
+            }
+
+            .recettes {
+                  display: flex;
+                  flex-direction: column;
+
+                  ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+
+                        li {
+                              position: relative;
+                              border-radius: 15px;
+                              background: white;
+                              padding: 15px;
+                              box-shadow: $shadow;
+
+                              h4 {
+                                    font-size: 18px;
+                                    margin-bottom: 5px;
+                              }
+
+                              .price {
+                                    position: absolute;
+                                    bottom: 15px;
+                                    right: 15px;
+                                    font-weight: 700;
+                              }
+                        }
+                  }
+            }
+      }
+
+      &__menu--name {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 0;
+
+            h2 {
+                  font-family: Shrikhand;
+                  margin: 0;
+                  font-size: 28px;
+            }
+
+            i {
+                  padding-right: 20px;
+                  transform: scale(1.8);
+                  height: fit-content;
+            }
+      }
+
+      &__menu--entrees,
+      &__menu--plats {
+            margin-bottom: 40px;
+      }
+
+      &__btn {
+            @include btn_gradient();
+            padding: 15px 40px;
+            margin: 40px auto;
+            width: fit-content;
       }
 }
