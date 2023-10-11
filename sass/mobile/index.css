@@ -312,4 +312,31 @@ footer .fa-handshake-simple {
   margin: 50px auto 0;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+@media screen and (min-width: 900px) {
+  .description_container {
+    gap: 18px;
+  }
+  .description_container h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .fonctionnement {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 180px;
+  }
+  .fonctionnement h2 {
+    width: 100%;
+    margin: 0;
+  }
+  .fonctionnement .choice__container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 25px;
+    flex: 1;
+  }
 }/*# sourceMappingURL=index.css.map */
