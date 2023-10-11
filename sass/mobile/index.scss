@@ -187,10 +187,13 @@ header {
 // Liste des restaurants
 .liste_restaurants {
       background: $light_gray;
-      display: flex;
-      flex-direction: column;
       padding: 50px 20px;
-      gap: 20px;
+
+      .each_restaurant {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+      }
 
       article {
             position: relative;
@@ -406,6 +409,58 @@ footer {
                   flex-direction: row;
                   margin-bottom: 25px;
                   flex: 1;
+            }
+      }
+
+      .liste_restaurants {
+            .each_restaurant {
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-template-rows: repeat(2, 1fr);
+                  grid-column-gap: 100px;
+                  grid-row-gap: 50px;
+            }
+      }
+
+      footer {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: end;
+            align-items: end;
+            padding: 60px 100px 30px 25px;
+            background: #353535;
+
+            img {
+                  filter: invert(1);
+                  width: 110px;
+                  margin: 0;
+            }
+
+            ul {
+                  display: flex;
+                  flex-direction: row;
+                  gap: 10px;
+                  margin-right: 100px;
+
+                  .links {
+                        display: flex;
+                        gap: 7px;
+                        margin-right: 100px;
+                  }
+
+                  li {
+                        display: flex;
+                        gap: 10px;
+
+                        a {
+                              color: white;
+                              font-weight: 500;
+
+                              &:nth-child(1) {
+                                    font-weight: 400;
+                              }
+                        }
+                  }
             }
       }
 }
