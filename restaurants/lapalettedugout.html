@@ -5,7 +5,7 @@
             <meta
                   name="viewport"
                   content="width=device-width, initial-scale=1.0" />
-            <title>OhMyFood - La palette du gout</title>
+            <title>OhMyFood - La palette du goût</title>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link
                   rel="preconnect"
@@ -20,25 +20,33 @@
                   integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
                   crossorigin="anonymous"
                   referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="../sass/mobile/index.css" />
       </head>
       <body>
             <main>
                   <!-- Ajout du header -->
 
-                  <iframe
-                        src="../components/header.html"
-                        frameborder="0"></iframe>
+                  <header>
+                        <nav>
+                              <h1>ohmyfood</h1>
+                              <a href="../index.html">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                              </a>
+                        </nav>
+                  </header>
 
                   <!-- Menu du restaurant -->
 
                   <section class="restaurant">
-                        <img src="" alt="" />
+                        <img
+                              src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                              alt="Photo du restaurant À la française" />
                         <div class="restaurant__menu">
-                              <div class="restaurant__name">
+                              <div class="restaurant__menu--name">
                                     <h2>La palette du goût</h2>
-                                    <i class="fav"></i>
+                                    <i class="fa-regular fa-heart"></i>
                               </div>
-                              <div class="restaurant__entrees">
+                              <div class="restaurant__menu--entrees">
                                     <h3>Entrées</h3>
                                     <div class="border"></div>
                                     <div class="recettes">
@@ -77,14 +85,14 @@
                                           </ul>
                                     </div>
                               </div>
-                              <div class="restaurant__plats">
+                              <div class="restaurant__menu--plats">
                                     <h3>Plats</h3>
                                     <div class="border"></div>
                                     <div class="recettes">
                                           <ul>
                                                 <li>
                                                       <h4>
-                                                            Filet de boeuf aux
+                                                            Filet de bœuf aux
                                                             herbes
                                                       </h4>
                                                       <p>
@@ -97,7 +105,7 @@
                                                 <li>
                                                       <h4>
                                                             Parmentier de queue
-                                                            de boeuf
+                                                            de bœuf
                                                       </h4>
                                                       <p>
                                                             À la truffe noire
@@ -107,14 +115,14 @@
                                                       <p class="price">35€</p>
                                                 </li>
                                                 <li>
-                                                      <h4>Filet de turbo</h4>
+                                                      <h4>Filet de turbot</h4>
                                                       <p>Aux agrumes</p>
                                                       <p class="price">44€</p>
                                                 </li>
                                           </ul>
                                     </div>
                               </div>
-                              <div class="restaurant__desserts">
+                              <div class="restaurant__menu--desserts">
                                     <h3>Desserts</h3>
                                     <div class="border"></div>
                                     <div class="recettes">
@@ -156,9 +164,28 @@
 
                   <!-- Ajout du footer -->
 
-                  <iframe
-                        src="../components/footer.html"
-                        frameborder="0"></iframe>
+                  <footer>
+                        <img
+                              src="../assets/images/logo/ohmyfood@2x.svg"
+                              alt="Logo ohmyfood" />
+                        <div class="links_container">
+                              <ul>
+                                    <li>
+                                          <i class="fa-solid fa-utensils"></i
+                                          ><a href="#"
+                                                >Proposer un restaurant</a
+                                          >
+                                    </li>
+                                    <li>
+                                          <i
+                                                class="fa-solid fa-handshake-simple"></i
+                                          ><a href="#">Devenir partenaire</a>
+                                    </li>
+                                    <li><a href="#">Mentions légales</a></li>
+                                    <li><a href="#">Contact</a></li>
+                              </ul>
+                        </div>
+                  </footer>
             </main>
       </body>
 </html>

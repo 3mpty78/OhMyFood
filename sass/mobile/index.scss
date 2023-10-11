@@ -284,9 +284,12 @@ footer {
 .restaurant {
       width: 100vw;
       height: auto;
+      background: $light_gray;
 
       img {
             width: 100%;
+            height: 275px;
+            object-fit: cover;
       }
 
       &__menu {
@@ -372,7 +375,7 @@ footer {
       &__btn {
             @include btn_gradient();
             padding: 15px 40px;
-            margin: 40px auto;
+            margin: 50px auto 0;
             width: fit-content;
       }
 }
