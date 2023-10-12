@@ -446,7 +446,7 @@ footer {
       .restaurant__menu {
             width: 75%;
             margin: 0 auto;
-            padding: 20px 200px;
+            padding: 20px 200px 0;
       }
 
       .restaurant__menu--name {
@@ -495,13 +495,12 @@ footer {
 
 @media screen and (min-width: 850px) {
       .restaurant {
-            background: white;
-
-            img {
+            background: white img {
                   height: 30vh;
             }
 
             &__menu {
+                  background: #353535;
                   width: 75%;
                   margin: 0 auto;
             }

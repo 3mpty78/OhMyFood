@@ -369,7 +369,7 @@ footer .fa-handshake-simple {
   .restaurant__menu {
     width: 75%;
     margin: 0 auto;
-    padding: 20px 200px;
+    padding: 20px 200px 0;
   }
   .restaurant__menu--name {
     justify-content: center;
@@ -410,12 +410,11 @@ footer .fa-handshake-simple {
 }
 @media screen and (min-width: 850px) {
   .restaurant {
-    background: white;
-  }
-  .restaurant img {
-    height: 30vh;
+    background: white img;
+    background-height: 30vh;
   }
   .restaurant__menu {
+    background: #353535;
     width: 75%;
     margin: 0 auto;
   }
