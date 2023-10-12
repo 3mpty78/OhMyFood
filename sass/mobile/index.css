@@ -233,7 +233,7 @@ footer .fa-handshake-simple {
 }
 
 .restaurant {
-  width: 100vw;
+  width: 100%;
   height: auto;
   background: #f6f6f6;
 }
@@ -366,6 +366,18 @@ footer .fa-handshake-simple {
   footer ul li a:nth-child(1) {
     font-weight: 400;
   }
+  .restaurant__menu {
+    width: 75%;
+    margin: 0 auto;
+    padding: 20px 200px;
+  }
+  .restaurant__menu--name {
+    justify-content: center;
+    gap: 24px;
+  }
+  .restaurant__menu--name i {
+    padding: 0;
+  }
 }
 @media screen and (min-width: 900px) {
   .fonctionnement {
@@ -394,5 +406,27 @@ footer .fa-handshake-simple {
   .description_container h2 {
     font-size: 40px;
     font-weight: 700;
+  }
+}
+@media screen and (min-width: 850px) {
+  .restaurant {
+    background: white;
+  }
+  .restaurant img {
+    height: 30vh;
+  }
+  .restaurant__menu {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .restaurant__menu--name {
+    justify-content: center;
+    gap: 24px;
+  }
+  .restaurant__menu--name i {
+    padding: 0;
+  }
+  .restaurant__btn {
+    margin: 50px auto 0;
   }
 }/*# sourceMappingURL=index.css.map */

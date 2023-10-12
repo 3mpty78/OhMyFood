@@ -290,7 +290,7 @@ footer {
 
 // Page des restaurants
 .restaurant {
-      width: 100vw;
+      width: 100%;
       height: auto;
       background: $light_gray;
 
@@ -442,6 +442,21 @@ footer {
                   }
             }
       }
+
+      .restaurant__menu {
+            width: 75%;
+            margin: 0 auto;
+            padding: 20px 200px;
+      }
+
+      .restaurant__menu--name {
+            justify-content: center;
+            gap: 24px;
+
+            i {
+                  padding: 0;
+            }
+      }
 }
 @media screen and (min-width: 900px) {
       .fonctionnement {
@@ -474,6 +489,34 @@ footer {
             h2 {
                   font-size: 40px;
                   font-weight: 700;
+            }
+      }
+}
+
+@media screen and (min-width: 850px) {
+      .restaurant {
+            background: white;
+
+            img {
+                  height: 30vh;
+            }
+
+            &__menu {
+                  width: 75%;
+                  margin: 0 auto;
+            }
+
+            &__menu--name {
+                  justify-content: center;
+                  gap: 24px;
+
+                  i {
+                        padding: 0;
+                  }
+            }
+
+            &__btn {
+                  margin: 50px auto 0;
             }
       }
 }
