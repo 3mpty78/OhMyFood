@@ -27,6 +27,8 @@ $gradient: linear-gradient(
       box-shadow: $shadow;
 }
 
+// Fonctions
+
 // Reset
 
 *,
@@ -230,6 +232,50 @@ header {
                   }
             }
 
+            // Gestion des coeurs
+
+            input[type="checkbox"]#first,
+            input[type="checkbox"]#second,
+            input[type="checkbox"]#third,
+            input[type="checkbox"]#fourth {
+                  display: none;
+            }
+
+            label {
+                  position: absolute;
+                  right: 15px;
+                  bottom: 25px;
+                  cursor: pointer;
+
+                  #vide {
+                        padding: 5px;
+                        transform: scale(1.4);
+                        z-index: 2;
+                  }
+            }
+
+            #plein {
+                  right: 5px;
+                  position: absolute;
+                  color: $secondary_color;
+                  z-index: 0;
+                  opacity: 0;
+            }
+
+            input[type="checkbox"]#first:checked + label #plein,
+            input[type="checkbox"]#second:checked + label #plein,
+            input[type="checkbox"]#third:checked + label #plein,
+            input[type="checkbox"]#fourth:checked + label #plein {
+                  opacity: 1;
+            }
+
+            input[type="checkbox"]#first:not(:checked) + label #plein,
+            input[type="checkbox"]#second:not(:checked) + label #plein,
+            input[type="checkbox"]#third:not(:checked) + label #plein,
+            input[type="checkbox"]#fourth:not(:checked) + label #plein {
+                  opacity: 0;
+            }
+
             .new_badge {
                   position: absolute;
                   top: 15px;
@@ -292,6 +338,9 @@ footer {
 .restaurant {
       width: 100%;
       height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       background: $light_gray;
 
       img {
@@ -301,8 +350,6 @@ footer {
       }
 
       &__menu {
-            position: relative;
-            top: -50px;
             display: flex;
             flex-direction: column;
             border-radius: 40px 40px 0 0;
@@ -388,11 +435,15 @@ footer {
       }
 }
 
-// Tablet
-
+// Desktop
 @media screen and (min-width: 1024px) {
       .liste_restaurants {
+            h2 {
+                  margin-left: 200px;
+            }
+
             .each_restaurant {
+                  padding: 0 200px;
                   display: grid;
                   grid-template-columns: repeat(2, 1fr);
                   grid-template-rows: repeat(2, 1fr);
@@ -446,7 +497,7 @@ footer {
       .restaurant__menu {
             width: 75%;
             margin: 0 auto;
-            padding: 20px 200px 0;
+            padding: 20px 200px 50px;
       }
 
       .restaurant__menu--name {
@@ -458,6 +509,8 @@ footer {
             }
       }
 }
+
+// Tablet
 @media screen and (min-width: 900px) {
       .fonctionnement {
             flex-flow: row wrap;
@@ -493,14 +546,22 @@ footer {
       }
 }
 
+// Medium screens
 @media screen and (min-width: 850px) {
       .restaurant {
-            background: white img {
-                  height: 30vh;
+            position: relative;
+            background: white;
+
+            img {
+                  position: absolute;
+                  height: 35vh;
             }
 
             &__menu {
-                  background: #353535;
+                  position: relative;
+                  top: calc(35vh - 50px);
+                  background: $light_gray;
+                  border: 1px solid white;
                   width: 75%;
                   margin: 0 auto;
             }
@@ -517,5 +578,10 @@ footer {
             &__btn {
                   margin: 50px auto 0;
             }
+      }
+
+      footer {
+            position: relative;
+            bottom: calc(-35vh + 50px);
       }
 }

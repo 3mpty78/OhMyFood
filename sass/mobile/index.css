@@ -183,6 +183,42 @@ header .geoloc_search input {
   flex-direction: column;
   gap: 5px;
 }
+.liste_restaurants article input[type=checkbox]#first,
+.liste_restaurants article input[type=checkbox]#second,
+.liste_restaurants article input[type=checkbox]#third,
+.liste_restaurants article input[type=checkbox]#fourth {
+  display: none;
+}
+.liste_restaurants article label {
+  position: absolute;
+  right: 15px;
+  bottom: 25px;
+  cursor: pointer;
+}
+.liste_restaurants article label #vide {
+  padding: 5px;
+  transform: scale(1.4);
+  z-index: 2;
+}
+.liste_restaurants article #plein {
+  right: 5px;
+  position: absolute;
+  color: #ff79da;
+  z-index: 0;
+  opacity: 0;
+}
+.liste_restaurants article input[type=checkbox]#first:checked + label #plein,
+.liste_restaurants article input[type=checkbox]#second:checked + label #plein,
+.liste_restaurants article input[type=checkbox]#third:checked + label #plein,
+.liste_restaurants article input[type=checkbox]#fourth:checked + label #plein {
+  opacity: 1;
+}
+.liste_restaurants article input[type=checkbox]#first:not(:checked) + label #plein,
+.liste_restaurants article input[type=checkbox]#second:not(:checked) + label #plein,
+.liste_restaurants article input[type=checkbox]#third:not(:checked) + label #plein,
+.liste_restaurants article input[type=checkbox]#fourth:not(:checked) + label #plein {
+  opacity: 0;
+}
 .liste_restaurants article .new_badge {
   position: absolute;
   top: 15px;
@@ -235,6 +271,9 @@ footer .fa-handshake-simple {
 .restaurant {
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #f6f6f6;
 }
 .restaurant img {
@@ -244,8 +283,6 @@ footer .fa-handshake-simple {
      object-fit: cover;
 }
 .restaurant__menu {
-  position: relative;
-  top: -50px;
   display: flex;
   flex-direction: column;
   border-radius: 40px 40px 0 0;
@@ -324,7 +361,11 @@ footer .fa-handshake-simple {
 }
 
 @media screen and (min-width: 1024px) {
+  .liste_restaurants h2 {
+    margin-left: 200px;
+  }
   .liste_restaurants .each_restaurant {
+    padding: 0 200px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -369,7 +410,7 @@ footer .fa-handshake-simple {
   .restaurant__menu {
     width: 75%;
     margin: 0 auto;
-    padding: 20px 200px 0;
+    padding: 20px 200px 50px;
   }
   .restaurant__menu--name {
     justify-content: center;
@@ -410,11 +451,18 @@ footer .fa-handshake-simple {
 }
 @media screen and (min-width: 850px) {
   .restaurant {
-    background: white img;
-    background-height: 30vh;
+    position: relative;
+    background: white;
+  }
+  .restaurant img {
+    position: absolute;
+    height: 35vh;
   }
   .restaurant__menu {
-    background: #353535;
+    position: relative;
+    top: calc(35vh - 50px);
+    background: #f6f6f6;
+    border: 1px solid white;
     width: 75%;
     margin: 0 auto;
   }
@@ -427,5 +475,9 @@ footer .fa-handshake-simple {
   }
   .restaurant__btn {
     margin: 50px auto 0;
+  }
+  footer {
+    position: relative;
+    bottom: calc(-35vh + 50px);
   }
 }/*# sourceMappingURL=index.css.map */
