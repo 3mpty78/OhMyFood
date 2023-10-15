@@ -430,7 +430,7 @@ footer {
       &__btn {
             @include btn_gradient();
             padding: 15px 40px;
-            margin: 50px auto 0;
+            margin: 50px auto;
             width: fit-content;
       }
 }
@@ -439,11 +439,11 @@ footer {
 @media screen and (min-width: 1024px) {
       .liste_restaurants {
             h2 {
-                  margin-left: 200px;
+                  margin-left: 180px;
             }
 
             .each_restaurant {
-                  padding: 0 200px;
+                  padding: 0 180px;
                   display: grid;
                   grid-template-columns: repeat(2, 1fr);
                   grid-template-rows: repeat(2, 1fr);
@@ -576,11 +576,11 @@ footer {
             }
 
             &__btn {
-                  margin: 50px auto 0;
+                  margin: 50px auto;
             }
       }
 
-      footer {
+      .resto {
             position: relative;
             bottom: calc(-35vh + 50px);
       }
