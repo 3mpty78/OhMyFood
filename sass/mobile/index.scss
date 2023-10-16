@@ -494,7 +494,8 @@ footer {
 
             #vide {
                   position: absolute;
-                  font-size: 22px;
+                  right: 25px;
+                  font-size: 25px;
                   height: fit-content;
 
                   #plein {
@@ -655,10 +656,10 @@ footer {
 
             &__menu--name {
                   justify-content: center;
-                  gap: 24px;
+                  gap: 25px;
 
-                  i {
-                        padding: 0;
+                  #vide {
+                        right: 0;
                   }
             }
 

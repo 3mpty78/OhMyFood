@@ -399,7 +399,8 @@ footer .fa-handshake-simple {
 }
 .restaurant__menu--name #vide {
   position: absolute;
-  font-size: 22px;
+  right: 25px;
+  font-size: 25px;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -535,10 +536,10 @@ footer .fa-handshake-simple {
   }
   .restaurant__menu--name {
     justify-content: center;
-    gap: 24px;
+    gap: 25px;
   }
-  .restaurant__menu--name i {
-    padding: 0;
+  .restaurant__menu--name #vide {
+    right: 0;
   }
   .restaurant__btn {
     margin: 50px auto;
