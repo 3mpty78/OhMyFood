@@ -9,7 +9,6 @@ $light_gray: #f6f6f6;
 $gray: #eaeaea;
 
 // Shadow & gradients
-
 $shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 $light_gradient: linear-gradient(
             90deg,
@@ -24,7 +23,6 @@ $gradient: linear-gradient(
 );
 
 // Mixins
-
 @mixin btn_gradient {
       background: $gradient;
       padding: 15px;
@@ -33,10 +31,7 @@ $gradient: linear-gradient(
       box-shadow: $shadow;
 }
 
-// Fonctions
-
 // Reset
-
 *,
 *:before,
 *:after {
@@ -84,6 +79,7 @@ header {
             }
 
             a {
+                  color: black;
                   position: absolute;
                   left: 20px;
                   transform: scale(1.5);
@@ -137,7 +133,6 @@ header {
             margin: 15px 0;
             text-align: center;
             font-size: 18px;
-            font-weight: lighter;
       }
 
       a {
