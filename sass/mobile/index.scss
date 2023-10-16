@@ -11,10 +11,16 @@ $gray: #eaeaea;
 // Shadow & gradients
 
 $shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+$light_gradient: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.15) 100%
+      ),
+      linear-gradient(0deg, $primary_color -5.2%, $secondary_color 110.74%);
 $gradient: linear-gradient(
-      201deg,
-      $primary_color -5.2%,
-      $secondary_color 110.74%
+      0deg,
+      $primary_color -11.44%,
+      $secondary_color 123.93%
 );
 
 // Mixins
@@ -37,6 +43,7 @@ $gradient: linear-gradient(
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
 }
 a {
       text-decoration: none;
@@ -135,6 +142,10 @@ header {
 
       a {
             @include btn_gradient();
+
+            &:active {
+                  background: $light_gradient;
+            }
       }
 }
 
@@ -257,9 +268,14 @@ header {
             #plein {
                   right: 5px;
                   position: absolute;
-                  color: $secondary_color;
-                  z-index: 0;
+                  color: transparent;
                   opacity: 0;
+
+                  // test
+                  background: $gradient;
+
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
             }
 
             input[type="checkbox"]#first:checked + label #plein,
@@ -380,11 +396,63 @@ footer {
                         gap: 12px;
 
                         li {
+                              overflow-x: hidden;
                               position: relative;
                               border-radius: 15px;
                               background: white;
-                              padding: 15px;
                               box-shadow: $shadow;
+                              display: flex;
+                              justify-content: space-between;
+
+                              .titre_recette {
+                                    padding: 15px;
+                              }
+
+                              input[type="checkbox"] {
+                                    display: none;
+                              }
+
+                              input[type="checkbox"]:checked
+                                    + label
+                                    .price_and_check {
+                                    transform: translateX(0);
+                              }
+
+                              label {
+                                    cursor: pointer;
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    .price_and_check {
+                                          display: flex;
+                                          height: 100%;
+                                          align-items: end;
+                                          gap: 15px;
+                                          transform: translateX(70px);
+                                          transition: transform 0.3s ease;
+
+                                          .price {
+                                                padding-bottom: 15px;
+                                          }
+
+                                          .check {
+                                                width: 70px;
+                                                height: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                background: $tertiary_color;
+
+                                                i {
+                                                      background: white;
+                                                      color: $tertiary_color;
+                                                      border-radius: 100%;
+                                                      padding: 5px;
+                                                }
+                                          }
+                                    }
+                              }
 
                               h4 {
                                     font-size: 18px;
@@ -392,9 +460,6 @@ footer {
                               }
 
                               .price {
-                                    position: absolute;
-                                    bottom: 15px;
-                                    right: 15px;
                                     font-weight: 700;
                               }
                         }

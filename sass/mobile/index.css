@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -93,11 +94,14 @@ header .geoloc_search input {
   font-weight: lighter;
 }
 .description_container a {
-  background: linear-gradient(201deg, #9456dc -5.2%, #ff79da 110.74%);
+  background: linear-gradient(0deg, #9456dc -11.44%, #ff79da 123.93%);
   padding: 15px;
   color: white;
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.description_container a:active {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(0deg, #9456dc -5.2%, #ff79da 110.74%);
 }
 
 .fonctionnement {
@@ -203,9 +207,11 @@ header .geoloc_search input {
 .liste_restaurants article #plein {
   right: 5px;
   position: absolute;
-  color: #ff79da;
-  z-index: 0;
+  color: transparent;
   opacity: 0;
+  background: linear-gradient(0deg, #9456dc -11.44%, #ff79da 123.93%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
 }
 .liste_restaurants article input[type=checkbox]#first:checked + label #plein,
 .liste_restaurants article input[type=checkbox]#second:checked + label #plein,
@@ -311,20 +317,59 @@ footer .fa-handshake-simple {
   gap: 12px;
 }
 .restaurant__menu .recettes ul li {
+  overflow-x: hidden;
   position: relative;
   border-radius: 15px;
   background: white;
-  padding: 15px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+}
+.restaurant__menu .recettes ul li .titre_recette {
+  padding: 15px;
+}
+.restaurant__menu .recettes ul li input[type=checkbox] {
+  display: none;
+}
+.restaurant__menu .recettes ul li input[type=checkbox]:checked + label .price_and_check {
+  transform: translateX(0);
+}
+.restaurant__menu .recettes ul li label {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.restaurant__menu .recettes ul li label .price_and_check {
+  display: flex;
+  height: 100%;
+  align-items: end;
+  gap: 15px;
+  transform: translateX(70px);
+  transition: transform 0.3s ease;
+}
+.restaurant__menu .recettes ul li label .price_and_check .price {
+  padding-bottom: 15px;
+}
+.restaurant__menu .recettes ul li label .price_and_check .check {
+  width: 70px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #99e2d0;
+}
+.restaurant__menu .recettes ul li label .price_and_check .check i {
+  background: white;
+  color: #99e2d0;
+  border-radius: 100%;
+  padding: 5px;
 }
 .restaurant__menu .recettes ul li h4 {
   font-size: 18px;
   margin-bottom: 5px;
 }
 .restaurant__menu .recettes ul li .price {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
   font-weight: 700;
 }
 .restaurant__menu--name {
@@ -349,7 +394,7 @@ footer .fa-handshake-simple {
   margin-bottom: 40px;
 }
 .restaurant__btn {
-  background: linear-gradient(201deg, #9456dc -5.2%, #ff79da 110.74%);
+  background: linear-gradient(0deg, #9456dc -11.44%, #ff79da 123.93%);
   padding: 15px;
   color: white;
   border-radius: 25px;
