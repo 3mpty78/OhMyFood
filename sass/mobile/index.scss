@@ -65,76 +65,38 @@ h2 {
       z-index: 10;
       animation: fadeOut 0.4s 2.5s forwards;
 
-      .smoke {
-            position: absolute;
-            top: 40%;
-            right: 44%;
-            display: flex;
-            gap: 15px;
+      h2 {
+            position: relative;
+            top: 50px;
+            font-family: Shrikhand;
+            font-size: 4vw;
+            letter-spacing: 3px;
 
-            span {
-                  height: 50px;
-                  width: 5px;
-                  background: $gradient;
-                  border-radius: 15px;
+            background: $gradient;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            color: transparent;
 
-                  &:nth-child(1) {
-                        animation: smoke 2s linear infinite;
-                  }
-                  &:nth-child(2) {
-                        animation: smoke 2s 0.2s linear infinite;
-                  }
-                  &:nth-child(3) {
-                        animation: smoke 2s 0.4s linear infinite;
-                  }
-            }
-      }
-
-      @keyframes smoke {
-            0%,
-            50%,
-            100% {
-                  opacity: 0;
-                  transform: translateY(0);
-            }
-            10% {
-                  opacity: 1;
-                  transform: translateY(-15px);
-            }
+            animation: fadeIn 1s ease-out forwards;
       }
 
       img {
             width: 25%;
             animation: cooking 2s ease-out infinite;
+            filter: drop-shadow(0 10px 5px #c7c7c7);
       }
 
-      @keyframes cooking {
-            0%,
-            100% {
-                  transform: translateX(0) rotate(0);
-            }
-            10%,
-            30%,
-            50%,
-            70% {
-                  transform: translateX(-10px) rotate(0);
-            }
-            20%,
-            40%,
-            60% {
-                  transform: translateX(10px) rotate(0);
-            }
-            80% {
-                  transform: translateX(10px) translateY(-10px) rotate(-10deg);
-            }
-      }
-      @keyframes fadeOut {
-            0% {
-                  opacity: 1;
-            }
-            100% {
-                  opacity: 0;
-                  display: none;
+      .loading {
+            width: 50%;
+            height: 8px;
+
+            &__bar {
+                  animation: loadingBar 2s 0.3s linear forwards;
+                  width: 100%;
+                  height: 100%;
+                  background: $light_gradient;
+                  box-shadow: $shadow;
+                  border-radius: 15px;
             }
       }
 }
@@ -604,6 +566,56 @@ footer {
             padding: 15px 40px;
             margin: 50px auto;
             width: fit-content;
+      }
+}
+
+// Keyframes
+@keyframes cooking {
+      0%,
+      100% {
+            transform: translateX(0) rotate(0);
+      }
+      10%,
+      30%,
+      50%,
+      70% {
+            transform: translateX(-10px) rotate(0);
+      }
+      20%,
+      40%,
+      60% {
+            transform: translateX(10px) rotate(0);
+      }
+      80% {
+            transform: translateX(10px) translateY(-10px) rotate(-10deg);
+      }
+}
+@keyframes fadeOut {
+      0% {
+            opacity: 1;
+      }
+      100% {
+            opacity: 0;
+            display: none;
+            pointer-events: none;
+      }
+}
+@keyframes loadingBar {
+      from {
+            width: 0;
+      }
+      to {
+            width: 100%;
+      }
+}
+@keyframes fadeIn {
+      from {
+            opacity: 0;
+            top: 0;
+      }
+      to {
+            opacity: 1;
+            top: 50px;
       }
 }
 
