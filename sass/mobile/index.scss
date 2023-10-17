@@ -76,8 +76,7 @@ h2 {
             letter-spacing: 3px;
 
             background: $gradient;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
+            background-clip: text;
             color: transparent;
 
             animation: fadeIn 1s ease-out forwards;
@@ -173,7 +172,6 @@ header {
             font-weight: 700;
             width: 75%;
             text-align: center;
-            text-wrap: pretty;
             margin: 0;
       }
 
@@ -222,7 +220,6 @@ header {
 
                   p {
                         font-weight: 500;
-                        text-wrap: balance;
                   }
             }
             & .last i {
@@ -315,8 +312,7 @@ header {
                   color: transparent;
                   opacity: 0;
                   background: $gradient;
-                  -webkit-background-clip: text;
-                  -moz-background-clip: text;
+                  background-clip: text;
             }
 
             input[type="checkbox"]#first:checked + label #plein,
@@ -407,6 +403,7 @@ header {
                               justify-content: space-between;
 
                               .titre_recette {
+                                    flex: 1;
                                     padding: 15px;
                               }
 
@@ -417,21 +414,34 @@ header {
                               }
 
                               label {
+                                    position: relative;
                                     cursor: pointer;
                                     width: 100%;
                                     display: flex;
                                     justify-content: space-between;
 
                                     .price_and_check {
+                                          position: absolute;
+                                          right: 0;
                                           display: flex;
                                           height: 100%;
                                           align-items: end;
-                                          gap: 15px;
                                           transform: translateX(70px);
                                           transition: transform 0.3s ease;
 
                                           .price {
-                                                padding-bottom: 15px;
+                                                height: 100%;
+                                                background: linear-gradient(
+                                                      90deg,
+                                                      rgba(255, 255, 255, 0) 0%,
+                                                      rgba(255, 255, 255, 1) 20%
+                                                );
+
+                                                display: flex;
+                                                align-items: end;
+                                                justify-content: flex-end;
+                                                padding: 15px;
+                                                padding-left: 25px;
                                           }
 
                                           .check {
@@ -505,8 +515,7 @@ header {
                         color: transparent;
                         opacity: 0;
                         background: $gradient;
-                        -webkit-background-clip: text;
-                        -moz-background-clip: text;
+                        background-clip: text;
                   }
             }
       }
@@ -712,10 +721,6 @@ footer {
                   align-items: center;
                   margin-bottom: 25px;
                   flex: 1;
-
-                  p {
-                        text-wrap: nowrap;
-                  }
             }
       }
 

@@ -45,7 +45,7 @@ h2 {
   letter-spacing: 3px;
   background: linear-gradient(0deg, #9456dc -11.44%, #ff79da 123.93%);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
+          background-clip: text;
   color: transparent;
   animation: fadeIn 1s ease-out forwards;
 }
@@ -128,7 +128,6 @@ header .geoloc_search input {
   font-weight: 700;
   width: 75%;
   text-align: center;
-  text-wrap: pretty;
   margin: 0;
 }
 .description_container p {
@@ -175,7 +174,6 @@ header .geoloc_search input {
 }
 .fonctionnement .choice__container .choice__item p {
   font-weight: 500;
-  text-wrap: balance;
 }
 .fonctionnement .choice__container .last i {
   color: #9456dc;
@@ -255,7 +253,7 @@ header .geoloc_search input {
   opacity: 0;
   background: linear-gradient(0deg, #9456dc -11.44%, #ff79da 123.93%);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
+          background-clip: text;
 }
 .liste_restaurants article input[type=checkbox]#first:checked + label #plein,
 .liste_restaurants article input[type=checkbox]#second:checked + label #plein,
@@ -336,27 +334,36 @@ header .geoloc_search input {
   justify-content: space-between;
 }
 .restaurant__menu .recettes ul li .titre_recette {
+  flex: 1;
   padding: 15px;
 }
 .restaurant__menu .recettes ul li input[type=checkbox]:checked + label .price_and_check {
   transform: translateX(0);
 }
 .restaurant__menu .recettes ul li label {
+  position: relative;
   cursor: pointer;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 .restaurant__menu .recettes ul li label .price_and_check {
+  position: absolute;
+  right: 0;
   display: flex;
   height: 100%;
   align-items: end;
-  gap: 15px;
   transform: translateX(70px);
   transition: transform 0.3s ease;
 }
 .restaurant__menu .recettes ul li label .price_and_check .price {
-  padding-bottom: 15px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 20%);
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  padding: 15px;
+  padding-left: 25px;
 }
 .restaurant__menu .recettes ul li label .price_and_check .check {
   width: 70px;
@@ -418,7 +425,7 @@ header .geoloc_search input {
   opacity: 0;
   background: linear-gradient(0deg, #9456dc -11.44%, #ff79da 123.93%);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
+          background-clip: text;
 }
 .restaurant__menu--entrees, .restaurant__menu--plats {
   margin-bottom: 40px;
@@ -591,9 +598,6 @@ footer .fa-handshake-simple {
     align-items: center;
     margin-bottom: 25px;
     flex: 1;
-  }
-  .fonctionnement .choice__container p {
-    text-wrap: nowrap;
   }
   .description_container {
     gap: 18px;
