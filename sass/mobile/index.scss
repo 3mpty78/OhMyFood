@@ -40,6 +40,9 @@ $gradient: linear-gradient(
       padding: 0;
       scroll-behavior: smooth;
 }
+main {
+      font-family: Roboto;
+}
 a {
       text-decoration: none;
 }
@@ -101,11 +104,6 @@ h2 {
       }
 }
 
-// Style homepage
-main {
-      font-family: Roboto;
-}
-
 // Header
 header {
       position: relative;
@@ -161,7 +159,7 @@ header {
       }
 }
 
-// En-tête
+// Description du site
 .description_container {
       display: flex;
       flex-direction: column;
@@ -350,50 +348,7 @@ header {
       }
 }
 
-// Footer
-footer {
-      display: flex;
-      flex-direction: column;
-      padding: 25px;
-      background: #353535;
-
-      img {
-            filter: invert(1);
-            width: 110px;
-            margin-bottom: 16px;
-      }
-
-      ul {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-
-            .links {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 10px;
-            }
-
-            li {
-                  display: flex;
-                  gap: 10px;
-                  a {
-                        color: white;
-                        font-weight: 500;
-                  }
-            }
-      }
-
-      i {
-            color: white;
-            width: 15px;
-      }
-      .fa-handshake-simple {
-            transform: rotate(-45deg);
-      }
-}
-
-// Page des restaurants
+// Page du/des restaurant(s)
 .restaurant {
       width: 100%;
       height: auto;
@@ -569,6 +524,49 @@ footer {
       }
 }
 
+// Footer
+footer {
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      background: #353535;
+
+      img {
+            filter: invert(1);
+            width: 110px;
+            margin-bottom: 16px;
+      }
+
+      ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .links {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+            }
+
+            li {
+                  display: flex;
+                  gap: 10px;
+                  a {
+                        color: white;
+                        font-weight: 500;
+                  }
+            }
+      }
+
+      i {
+            color: white;
+            width: 15px;
+      }
+      .fa-handshake-simple {
+            transform: rotate(-45deg);
+      }
+}
+
 // Keyframes
 @keyframes cooking {
       0%,
@@ -619,6 +617,7 @@ footer {
       }
 }
 
+// Responsive
 // Desktop
 @media screen and (min-width: 1024px) {
       .liste_restaurants {
