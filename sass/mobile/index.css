@@ -307,7 +307,7 @@ header .geoloc_search input {
 }
 .restaurant__menu h3 {
   text-transform: uppercase;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 16px;
 }
 .restaurant__menu .border {
