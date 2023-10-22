@@ -301,14 +301,14 @@ header {
                   bottom: 25px;
                   cursor: pointer;
 
-                  #vide {
+                  .vide {
                         padding: 5px;
                         transform: scale(1.4);
                         z-index: 2;
                   }
             }
 
-            #plein {
+            .plein {
                   right: 5px;
                   position: absolute;
                   color: transparent;
@@ -317,17 +317,17 @@ header {
                   background-clip: text;
             }
 
-            input[type="checkbox"]#first:checked + label #plein,
-            input[type="checkbox"]#second:checked + label #plein,
-            input[type="checkbox"]#third:checked + label #plein,
-            input[type="checkbox"]#fourth:checked + label #plein {
+            input[type="checkbox"]#first:checked + label .plein,
+            input[type="checkbox"]#second:checked + label .plein,
+            input[type="checkbox"]#third:checked + label .plein,
+            input[type="checkbox"]#fourth:checked + label .plein {
                   opacity: 1;
             }
 
-            input[type="checkbox"]#first:not(:checked) + label #plein,
-            input[type="checkbox"]#second:not(:checked) + label #plein,
-            input[type="checkbox"]#third:not(:checked) + label #plein,
-            input[type="checkbox"]#fourth:not(:checked) + label #plein {
+            input[type="checkbox"]#first:not(:checked) + label .plein,
+            input[type="checkbox"]#second:not(:checked) + label .plein,
+            input[type="checkbox"]#third:not(:checked) + label .plein,
+            input[type="checkbox"]#fourth:not(:checked) + label .plein {
                   opacity: 0;
             }
 
@@ -404,6 +404,10 @@ header {
                               display: flex;
                               justify-content: space-between;
 
+                              span {
+                                    display: block;
+                              }
+
                               .titre_recette {
                                     flex: 1;
                                     padding: 15px;
@@ -464,9 +468,10 @@ header {
                                     }
                               }
 
-                              h4 {
+                              .h4 {
                                     font-size: 18px;
                                     margin-bottom: 5px;
+                                    font-weight: 500;
                               }
 
                               .price {
@@ -495,7 +500,7 @@ header {
                   justify-content: center;
             }
 
-            input[type="checkbox"]#like:checked + label #plein {
+            input[type="checkbox"]#like:checked + label .plein {
                   opacity: 1;
             }
 
@@ -505,13 +510,13 @@ header {
                   font-size: 28px;
             }
 
-            #vide {
+            .vide {
                   position: absolute;
                   right: 25px;
                   font-size: 25px;
                   height: fit-content;
 
-                  #plein {
+                  .plein {
                         right: 0;
                         position: absolute;
                         color: transparent;
@@ -544,8 +549,8 @@ footer {
 
       img {
             filter: invert(1);
-            width: 110px;
-            margin-bottom: 16px;
+            width: 120px;
+            margin-bottom: 20px;
       }
 
       ul {
@@ -553,18 +558,12 @@ footer {
             flex-direction: column;
             gap: 10px;
 
-            .links {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 10px;
-            }
-
             li {
                   display: flex;
                   gap: 10px;
                   a {
                         color: white;
-                        font-weight: 500;
+                        font-weight: 300;
                   }
             }
       }
@@ -666,12 +665,6 @@ footer {
                   gap: 10px;
                   margin-right: 100px;
 
-                  .links {
-                        flex-direction: row;
-                        gap: 7px;
-                        margin-right: 100px;
-                  }
-
                   li {
                         display: flex;
                         gap: 10px;
@@ -683,6 +676,9 @@ footer {
                               &:nth-child(1) {
                                     font-weight: 400;
                               }
+                        }
+                        &:nth-child(2) {
+                              margin-right: 50px;
                         }
                   }
             }
@@ -760,7 +756,7 @@ footer {
                   justify-content: center;
                   gap: 25px;
 
-                  #vide {
+                  .vide {
                         right: 0;
                   }
             }

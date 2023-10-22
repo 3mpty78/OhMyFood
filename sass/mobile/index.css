@@ -241,12 +241,12 @@ header .geoloc_search input {
   bottom: 25px;
   cursor: pointer;
 }
-.liste_restaurants article label #vide {
+.liste_restaurants article label .vide {
   padding: 5px;
   transform: scale(1.4);
   z-index: 2;
 }
-.liste_restaurants article #plein {
+.liste_restaurants article .plein {
   right: 5px;
   position: absolute;
   color: transparent;
@@ -255,16 +255,16 @@ header .geoloc_search input {
   -webkit-background-clip: text;
           background-clip: text;
 }
-.liste_restaurants article input[type=checkbox]#first:checked + label #plein,
-.liste_restaurants article input[type=checkbox]#second:checked + label #plein,
-.liste_restaurants article input[type=checkbox]#third:checked + label #plein,
-.liste_restaurants article input[type=checkbox]#fourth:checked + label #plein {
+.liste_restaurants article input[type=checkbox]#first:checked + label .plein,
+.liste_restaurants article input[type=checkbox]#second:checked + label .plein,
+.liste_restaurants article input[type=checkbox]#third:checked + label .plein,
+.liste_restaurants article input[type=checkbox]#fourth:checked + label .plein {
   opacity: 1;
 }
-.liste_restaurants article input[type=checkbox]#first:not(:checked) + label #plein,
-.liste_restaurants article input[type=checkbox]#second:not(:checked) + label #plein,
-.liste_restaurants article input[type=checkbox]#third:not(:checked) + label #plein,
-.liste_restaurants article input[type=checkbox]#fourth:not(:checked) + label #plein {
+.liste_restaurants article input[type=checkbox]#first:not(:checked) + label .plein,
+.liste_restaurants article input[type=checkbox]#second:not(:checked) + label .plein,
+.liste_restaurants article input[type=checkbox]#third:not(:checked) + label .plein,
+.liste_restaurants article input[type=checkbox]#fourth:not(:checked) + label .plein {
   opacity: 0;
 }
 .liste_restaurants article .new_badge {
@@ -333,6 +333,9 @@ header .geoloc_search input {
   display: flex;
   justify-content: space-between;
 }
+.restaurant__menu .recettes ul li span {
+  display: block;
+}
 .restaurant__menu .recettes ul li .titre_recette {
   flex: 1;
   padding: 15px;
@@ -379,9 +382,10 @@ header .geoloc_search input {
   border-radius: 100%;
   padding: 5px;
 }
-.restaurant__menu .recettes ul li h4 {
+.restaurant__menu .recettes ul li .h4 {
   font-size: 18px;
   margin-bottom: 5px;
+  font-weight: 500;
 }
 .restaurant__menu .recettes ul li .price {
   font-weight: 700;
@@ -403,7 +407,7 @@ header .geoloc_search input {
   align-items: center;
   justify-content: center;
 }
-.restaurant__menu--name input[type=checkbox]#like:checked + label #plein {
+.restaurant__menu--name input[type=checkbox]#like:checked + label .plein {
   opacity: 1;
 }
 .restaurant__menu--name h2 {
@@ -411,14 +415,14 @@ header .geoloc_search input {
   margin: 0;
   font-size: 28px;
 }
-.restaurant__menu--name #vide {
+.restaurant__menu--name .vide {
   position: absolute;
   right: 25px;
   font-size: 25px;
   height: -moz-fit-content;
   height: fit-content;
 }
-.restaurant__menu--name #vide #plein {
+.restaurant__menu--name .vide .plein {
   right: 0;
   position: absolute;
   color: transparent;
@@ -450,15 +454,10 @@ footer {
 }
 footer img {
   filter: invert(1);
-  width: 110px;
-  margin-bottom: 16px;
+  width: 120px;
+  margin-bottom: 20px;
 }
 footer ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-footer ul .links {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -469,7 +468,7 @@ footer ul li {
 }
 footer ul li a {
   color: white;
-  font-weight: 500;
+  font-weight: 300;
 }
 footer i {
   color: white;
@@ -552,11 +551,6 @@ footer .fa-handshake-simple {
     gap: 10px;
     margin-right: 100px;
   }
-  footer ul .links {
-    flex-direction: row;
-    gap: 7px;
-    margin-right: 100px;
-  }
   footer ul li {
     display: flex;
     gap: 10px;
@@ -567,6 +561,9 @@ footer .fa-handshake-simple {
   }
   footer ul li a:nth-child(1) {
     font-weight: 400;
+  }
+  footer ul li:nth-child(2) {
+    margin-right: 50px;
   }
   .restaurant__menu {
     width: 75%;
@@ -628,7 +625,7 @@ footer .fa-handshake-simple {
     justify-content: center;
     gap: 25px;
   }
-  .restaurant__menu--name #vide {
+  .restaurant__menu--name .vide {
     right: 0;
   }
   .restaurant__btn {
