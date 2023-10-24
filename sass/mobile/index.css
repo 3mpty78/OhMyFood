@@ -697,6 +697,9 @@ footer .fa-handshake-simple {
   }
 }
 @media screen and (max-width: 330px) {
+  .fonctionnement .choice__container .choice__item {
+    padding: 30px 0 30px 30px;
+  }
   .restaurant__menu--name .vide {
     right: 0;
   }
