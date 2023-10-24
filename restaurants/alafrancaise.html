@@ -42,6 +42,8 @@
                               src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                               alt="Photo du restaurant À la française" />
                         <div class="restaurant__menu">
+                              <!-- Ajout de l'en-tête -->
+
                               <div class="restaurant__menu--name">
                                     <h2>À la française</h2>
                                     <input type="checkbox" id="like" />
@@ -52,61 +54,76 @@
                                           </i>
                                     </label>
                               </div>
+
+                              <!-- Liste des recettes -->
+
                               <div class="restaurant__menu--entrees">
                                     <h3>Entrées</h3>
                                     <div class="border"></div>
                                     <div class="recettes">
-                                          <ul>
-                                                <li>
-                                                      <input
-                                                            type="checkbox"
-                                                            id="entree_1" />
-                                                      <label for="entree_1">
+                                          <!-- Liste des entrées -->
+                                          <!-- Première entrée -->
+
+                                          <article>
+                                                <input
+                                                      type="checkbox"
+                                                      name="check_menu"
+                                                      id="entree_1" />
+                                                <label for="entree_1">
+                                                      <span class="card">
                                                             <span
-                                                                  class="titre_recette">
+                                                                  class="card_text">
                                                                   <span
-                                                                        class="h4">
-                                                                        Tartare
+                                                                        class="h4"
+                                                                        >Tartare
                                                                         de
                                                                         poulpe
-                                                                        acidulé
-                                                                  </span>
-                                                                  <span>
-                                                                        Aux
+                                                                        acidulé</span
+                                                                  >
+                                                                  <span
+                                                                        class="paragraph"
+                                                                        >Aux
                                                                         zestes
-                                                                        d'orange
-                                                                  </span>
+                                                                        d'orange</span
+                                                                  >
                                                             </span>
                                                             <span
                                                                   class="price_and_check">
                                                                   <span
-                                                                        class="price">
-                                                                        25€
-                                                                  </span>
-                                                                  <span
-                                                                        class="check">
-                                                                        <i
-                                                                              class="fa-solid fa-check"></i>
-                                                                  </span>
+                                                                        class="price"
+                                                                        >25€</span
+                                                                  >
                                                             </span>
-                                                      </label>
-                                                </li>
-                                                <li>
-                                                      <input
-                                                            type="checkbox"
-                                                            id="entree_2" />
-                                                      <label for="entree_2">
+                                                      </span>
+
+                                                      <ins class="check">
+                                                            <i
+                                                                  class="fa-solid fa-check"></i>
+                                                      </ins>
+                                                </label>
+                                          </article>
+
+                                          <!-- Deuxième entrée -->
+
+                                          <article>
+                                                <input
+                                                      type="checkbox"
+                                                      name="check_menu"
+                                                      id="entree_2" />
+                                                <label for="entree_2">
+                                                      <span class="card">
                                                             <span
-                                                                  class="titre_recette">
+                                                                  class="card_text">
                                                                   <span
-                                                                        class="h4">
-                                                                        Velouté
+                                                                        class="h4"
+                                                                        >Velouté
                                                                         de
                                                                         légumes
-                                                                        d'antan
-                                                                  </span>
-                                                                  <span>
-                                                                        Carotte,
+                                                                        d'antan</span
+                                                                  >
+                                                                  <span
+                                                                        class="paragraph"
+                                                                        >Carotte,
                                                                         panais,
                                                                         topinambour
                                                                   </span>
@@ -114,69 +131,84 @@
                                                             <span
                                                                   class="price_and_check">
                                                                   <span
-                                                                        class="price">
-                                                                        35€
-                                                                  </span>
-                                                                  <span
-                                                                        class="check">
-                                                                        <i
-                                                                              class="fa-solid fa-check"></i>
-                                                                  </span>
+                                                                        class="price"
+                                                                        >35€</span
+                                                                  >
                                                             </span>
-                                                      </label>
-                                                </li>
-                                                <li>
-                                                      <input
-                                                            type="checkbox"
-                                                            id="entree_3" />
-                                                      <label for="entree_3">
+                                                      </span>
+
+                                                      <ins class="check">
+                                                            <i
+                                                                  class="fa-solid fa-check"></i>
+                                                      </ins>
+                                                </label>
+                                          </article>
+
+                                          <!-- Troisième entrée -->
+
+                                          <article>
+                                                <input
+                                                      type="checkbox"
+                                                      name="check_menu"
+                                                      id="entree_3" />
+                                                <label for="entree_3">
+                                                      <span class="card">
                                                             <span
-                                                                  class="titre_recette">
+                                                                  class="card_text">
                                                                   <span
-                                                                        class="h4">
-                                                                        Soupe à
+                                                                        class="h4"
+                                                                        >Soupe à
                                                                         l'oignon
                                                                   </span>
-                                                                  <span>
-                                                                        Revisitée
+                                                                  <span
+                                                                        class="paragraph"
+                                                                        >Revisitée
                                                                   </span>
                                                             </span>
                                                             <span
                                                                   class="price_and_check">
                                                                   <span
-                                                                        class="price">
-                                                                        20€
-                                                                  </span>
-                                                                  <span
-                                                                        class="check">
-                                                                        <i
-                                                                              class="fa-solid fa-check"></i>
-                                                                  </span>
+                                                                        class="price"
+                                                                        >20€</span
+                                                                  >
                                                             </span>
-                                                      </label>
-                                                </li>
-                                          </ul>
+                                                      </span>
+
+                                                      <ins class="check">
+                                                            <i
+                                                                  class="fa-solid fa-check"></i>
+                                                      </ins>
+                                                </label>
+                                          </article>
                                     </div>
                               </div>
+
+                              <!-- Liste des plats -->
+
                               <div class="restaurant__menu--plats">
                                     <h3>Plats</h3>
                                     <div class="border"></div>
                                     <div class="recettes">
-                                          <ul>
-                                                <li>
-                                                      <input
-                                                            type="checkbox"
-                                                            id="plat_1" />
-                                                      <label for="plat_1">
+                                          <!-- Liste des entrées -->
+                                          <!-- Premier plat -->
+
+                                          <article>
+                                                <input
+                                                      type="checkbox"
+                                                      name="check_menu"
+                                                      id="plat_1" />
+                                                <label for="plat_1">
+                                                      <span class="card">
                                                             <span
-                                                                  class="titre_recette">
+                                                                  class="card_text">
                                                                   <span
-                                                                        class="h4">
-                                                                        Coquilles
+                                                                        class="h4"
+                                                                        >Coquilles
                                                                         Saint-Jacques
                                                                   </span>
-                                                                  <span>
-                                                                        Accompagnées
+                                                                  <span
+                                                                        class="paragraph"
+                                                                        >Accompagnées
                                                                         d'une
                                                                         purée de
                                                                         panais
@@ -185,32 +217,39 @@
                                                             <span
                                                                   class="price_and_check">
                                                                   <span
-                                                                        class="price">
-                                                                        40€
-                                                                  </span>
-                                                                  <span
-                                                                        class="check">
-                                                                        <i
-                                                                              class="fa-solid fa-check"></i>
-                                                                  </span>
+                                                                        class="price"
+                                                                        >40€</span
+                                                                  >
                                                             </span>
-                                                      </label>
-                                                </li>
-                                                <li>
-                                                      <input
-                                                            type="checkbox"
-                                                            id="plat_2" />
-                                                      <label for="plat_2">
+                                                      </span>
+
+                                                      <ins class="check">
+                                                            <i
+                                                                  class="fa-solid fa-check"></i>
+                                                      </ins>
+                                                </label>
+                                          </article>
+
+                                          <!-- Deuxième plat -->
+
+                                          <article>
+                                                <input
+                                                      type="checkbox"
+                                                      name="check_menu"
+                                                      id="plat_2" />
+                                                <label for="plat_2">
+                                                      <span class="card">
                                                             <span
-                                                                  class="titre_recette">
+                                                                  class="card_text">
                                                                   <span
-                                                                        class="h4">
-                                                                        Magret
+                                                                        class="h4"
+                                                                        >Magret
                                                                         de
                                                                         canard
                                                                   </span>
-                                                                  <span>
-                                                                        Et
+                                                                  <span
+                                                                        class="paragraph"
+                                                                        >Et
                                                                         parmentier
                                                                         de
                                                                         pommes
@@ -220,31 +259,38 @@
                                                             <span
                                                                   class="price_and_check">
                                                                   <span
-                                                                        class="price">
-                                                                        35€
-                                                                  </span>
-                                                                  <span
-                                                                        class="check">
-                                                                        <i
-                                                                              class="fa-solid fa-check"></i>
-                                                                  </span>
+                                                                        class="price"
+                                                                        >35€</span
+                                                                  >
                                                             </span>
-                                                      </label>
-                                                </li>
-                                                <li>
-                                                      <input
-                                                            type="checkbox"
-                                                            id="plat_3" />
-                                                      <label for="plat_3">
+                                                      </span>
+
+                                                      <ins class="check">
+                                                            <i
+                                                                  class="fa-solid fa-check"></i>
+                                                      </ins>
+                                                </label>
+                                          </article>
+
+                                          <!-- Troisième plat -->
+
+                                          <article>
+                                                <input
+                                                      type="checkbox"
+                                                      name="check_menu"
+                                                      id="plat_3" />
+                                                <label for="plat_3">
+                                                      <span class="card">
                                                             <span
-                                                                  class="titre_recette">
+                                                                  class="card_text">
                                                                   <span
-                                                                        class="h4">
-                                                                        Pigeonneau
+                                                                        class="h4"
+                                                                        >Pigeonneau
                                                                         d’Ille-et-Vilaine
                                                                   </span>
-                                                                  <span>
-                                                                        Sur son
+                                                                  <span
+                                                                        class="paragraph"
+                                                                        >Sur son
                                                                         lit de
                                                                         gnocchis
                                                                         aux
@@ -254,104 +300,125 @@
                                                             <span
                                                                   class="price_and_check">
                                                                   <span
-                                                                        class="price">
-                                                                        44€
-                                                                  </span>
-                                                                  <span
-                                                                        class="check">
-                                                                        <i
-                                                                              class="fa-solid fa-check"></i>
-                                                                  </span>
+                                                                        class="price"
+                                                                        >44€</span
+                                                                  >
                                                             </span>
-                                                      </label>
-                                                </li>
-                                          </ul>
+                                                      </span>
+
+                                                      <ins class="check">
+                                                            <i
+                                                                  class="fa-solid fa-check"></i>
+                                                      </ins>
+                                                </label>
+                                          </article>
                                     </div>
                               </div>
+
+                              <!-- Liste des desserts -->
+
                               <div class="restaurant__menu--desserts">
                                     <h3>Desserts</h3>
                                     <div class="border"></div>
                                     <div class="recettes">
-                                          <ul>
-                                                <li>
-                                                      <input
-                                                            type="checkbox"
-                                                            id="dessert_1" />
-                                                      <label for="dessert_1">
+                                          <!-- Premièrr dessert -->
+
+                                          <article>
+                                                <input
+                                                      type="checkbox"
+                                                      name="check_menu"
+                                                      id="dessert_1" />
+                                                <label for="dessert_1">
+                                                      <span class="card">
                                                             <span
-                                                                  class="titre_recette">
+                                                                  class="card_text">
                                                                   <span
-                                                                        class="h4">
-                                                                        Pétales
+                                                                        class="h4"
+                                                                        >Pétales
                                                                         de
                                                                         violettes
                                                                         glacés
                                                                   </span>
-                                                                  <span>
-                                                                        Et purée
-                                                                        de
+                                                                  <span
+                                                                        class="paragraph"
+                                                                        >Et
+                                                                        purée de
                                                                         noisettes
                                                                   </span>
                                                             </span>
                                                             <span
                                                                   class="price_and_check">
                                                                   <span
-                                                                        class="price">
-                                                                        18€
-                                                                  </span>
-                                                                  <span
-                                                                        class="check">
-                                                                        <i
-                                                                              class="fa-solid fa-check"></i>
-                                                                  </span>
+                                                                        class="price"
+                                                                        >18€</span
+                                                                  >
                                                             </span>
-                                                      </label>
-                                                </li>
-                                                <li>
-                                                      <input
-                                                            type="checkbox"
-                                                            id="dessert_2" />
-                                                      <label for="dessert_2">
+                                                      </span>
+
+                                                      <ins class="check">
+                                                            <i
+                                                                  class="fa-solid fa-check"></i>
+                                                      </ins>
+                                                </label>
+                                          </article>
+
+                                          <!-- Deuxième dessert -->
+
+                                          <article>
+                                                <input
+                                                      type="checkbox"
+                                                      name="check_menu"
+                                                      id="dessert_2" />
+                                                <label for="dessert_2">
+                                                      <span class="card">
                                                             <span
-                                                                  class="titre_recette">
+                                                                  class="card_text">
                                                                   <span
-                                                                        class="h4">
-                                                                        Fondant
+                                                                        class="h4"
+                                                                        >Fondant
                                                                         au
                                                                         chocolat
                                                                   </span>
-                                                                  <span>
-                                                                        Revisité
+                                                                  <span
+                                                                        class="paragraph"
+                                                                        >Revisité
                                                                   </span>
                                                             </span>
                                                             <span
                                                                   class="price_and_check">
                                                                   <span
-                                                                        class="price">
-                                                                        22€
-                                                                  </span>
-                                                                  <span
-                                                                        class="check">
-                                                                        <i
-                                                                              class="fa-solid fa-check"></i>
-                                                                  </span>
+                                                                        class="price"
+                                                                        >22€</span
+                                                                  >
                                                             </span>
-                                                      </label>
-                                                </li>
-                                                <li>
-                                                      <input
-                                                            type="checkbox"
-                                                            id="dessert_3" />
-                                                      <label for="dessert_3">
+                                                      </span>
+
+                                                      <ins class="check">
+                                                            <i
+                                                                  class="fa-solid fa-check"></i>
+                                                      </ins>
+                                                </label>
+                                          </article>
+
+                                          <!-- Troisième dessert -->
+
+                                          <article>
+                                                <input
+                                                      type="checkbox"
+                                                      name="check_menu"
+                                                      id="dessert_3" />
+                                                <label for="dessert_3">
+                                                      <span class="card">
                                                             <span
-                                                                  class="titre_recette">
+                                                                  class="card_text">
                                                                   <span
-                                                                        class="h4">
-                                                                        Millefeuille
+                                                                        class="h4"
+                                                                        >Millefeuille
                                                                         croustillant
                                                                   </span>
-                                                                  <span>
-                                                                        Myrtilles
+                                                                  <span
+                                                                        class="paragraph"
+                                                                        >Myrtilles
                                                                         et pâte
                                                                         d’amande
                                                                   </span>
@@ -359,20 +426,23 @@
                                                             <span
                                                                   class="price_and_check">
                                                                   <span
-                                                                        class="price">
-                                                                        23€
-                                                                  </span>
-                                                                  <span
-                                                                        class="check">
-                                                                        <i
-                                                                              class="fa-solid fa-check"></i>
-                                                                  </span>
+                                                                        class="price"
+                                                                        >23€</span
+                                                                  >
                                                             </span>
-                                                      </label>
-                                                </li>
-                                          </ul>
+                                                      </span>
+
+                                                      <ins class="check">
+                                                            <i
+                                                                  class="fa-solid fa-check"></i>
+                                                      </ins>
+                                                </label>
+                                          </article>
                                     </div>
                               </div>
+
+                              <!-- Bouton "commander"" -->
+
                               <a href="#" class="restaurant__btn">Commander</a>
                         </div>
                   </section>

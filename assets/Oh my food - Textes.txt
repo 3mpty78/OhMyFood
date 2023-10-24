@@ -39,8 +39,8 @@ Et glace à la vanille de Madagascar
 Mousse au chocolat 
 Au piment d'Espelette et à la truffe noire
 23€  
-  
----     
+
+_____________________________________________
 
 Le délice des sens
 
@@ -83,7 +83,7 @@ Tiramisu
 À la noisette
 23€
 
----
+_____________________________________________
 
 La note enchantée
 
@@ -130,7 +130,7 @@ Tarte au citron meringuée
 Déstructurée
 23€
 
----
+_____________________________________________
 
 À la française
 
